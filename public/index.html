@@ -49,9 +49,16 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section>
-        <h4>What are you humming about?</h4>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio fuga, repudiandae nulla earum ut numquam est quisquam repellendus laborum nisi iste veniam a, obcaecati eaque consequatur rerum hic aperiam temporibus?</p>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form>
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
       </section>
     </main>
   </body>
