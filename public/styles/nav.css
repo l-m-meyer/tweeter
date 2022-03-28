@@ -1,10 +1,25 @@
 nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 120px;
   width: 100vw;
   background-color: #4056A1;
   color: #FFFFFF;
-  padding: 0em 1.5em;
+  padding: 0 1.5em;
 }
 nav > span {
   font-family: Bungee, cursive, sans-serif;
+}
+nav > div {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+
+}
+nav > div > p, i {
+  margin: 0 auto;
+}
+nav > div > i {
+  color: red;
 }
