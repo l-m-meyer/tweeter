@@ -3,12 +3,12 @@ $(document).ready(function() {
   $('#tweet-text').on('input', function(e) {
     let len = $(this).val().length;
     let remainder = counter - len;
-    
-    $('.counter').text(remainder);
+    const inputCounter = $(this).next().children()[1];
+    $(inputCounter).text(remainder);
     if (remainder < 0) {
-      $('.counter').css('color', 'red')
+      $(inputCounter).css('color', 'red')
     } else {
-      $('.counter').css('color', 'black')
+      $(inputCounter).css('color', 'black')
     }
   });
 });
