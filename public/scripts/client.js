@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 // use to empty tweets
 // $('.tweet-container').empty();
 
@@ -64,22 +65,18 @@ const createTweetElement = (data) => {
 
   return $tweet;  
 };
-      
-
-
 
 $(() => {
   
   renderTweets(data);
   // event listener
-  $('.new-tweet--form').on('submit', (e) => {
+  $('.new-tweet--form').submit(function(e) {
     e.preventDefault();
-    console.log('abc');
-    // $.get('/tweets', data).then( user => {
-    //   for (let info of user) {
-    //     createTweetElement(info);
-    //     console.log('tweets:', createTweetElement(info));
-    //   }
-    // })
+    const query = $(this).serialize();
+    console.log(query);
+    $.post('/tweets', query)
+      // .then( tweet => {
+      // renderTweets(tweet);
+    // });
   })
 });
