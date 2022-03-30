@@ -55,11 +55,15 @@ $(() => {
   $('.new-tweet--form').submit(function(e) {
     e.preventDefault();
     const query = $(this).serialize();
+
     if (!$('#tweet-text').val().length) alert('Your tweet is empty!');
     if ($('#tweet-text').val().length > 140) alert('Shorten your tweet!');
     else { 
-      $.post('/tweets', query)
-        .then(() => loadTweets());
+      $.post('/tweets', query).then(() => {
+        $('.tweet-container').empty();
+        loadTweets();
+        $('.new-tweet--form').trigger("reset");
+      });
     }
   })
 });
