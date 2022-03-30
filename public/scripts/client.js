@@ -4,12 +4,15 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// prevents cross-site scripting
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
-// use to empty tweets
-// $('.tweet-container').empty();
-
+//appends tweet to the tweets container
 const renderTweets = (tweets) => {
-  //takes return value and appends it to the tweets container
   for (let tweet of tweets) {
     $('.tweet-container').prepend(createTweetElement(tweet));
   }
@@ -27,7 +30,7 @@ const createTweetElement = (data) => {
       </div>
       <h4 class="userHandle">${data.user.handle}</h4>
     </header>
-    <p>${data.content.text}</p>
+    <p>${escape(data.content.text)}</p>
     <footer>
       <output class="footer--date">${timeago.format(data.created_at)}</output>
       <div class="footer--icons">
