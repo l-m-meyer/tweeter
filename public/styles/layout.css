@@ -40,6 +40,7 @@ main section.new-tweet h4 {
 }
 .tweet-container {
   margin: 2em 0;
+  height: 100vh;
 }
 .tweet {
   display: flex;
@@ -47,6 +48,9 @@ main section.new-tweet h4 {
   align-items: center;
   
   border: 3px solid black;
+}
+.tweet:hover {
+  box-shadow: 5px 6px 0px 0px #C9CBDF;
 }
 .tweet header {
   width: 95%;
@@ -92,4 +96,7 @@ main section.new-tweet h4 {
   display: flex;
   justify-content: space-between;
   color: #48569D;
+}
+.tweet footer div i:hover {
+  color: #C7A455;
 }
