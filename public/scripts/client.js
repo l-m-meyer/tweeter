@@ -8,31 +8,6 @@
 // use to empty tweets
 // $('.tweet-container').empty();
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1648484086955
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1648570486955
-  }
-];
-
 const renderTweets = (tweets) => {
   //takes return value and appends it to the tweets container
   for (let tweet of tweets) {
@@ -67,16 +42,20 @@ const createTweetElement = (data) => {
 };
 
 $(() => {
+  const loadTweets = () => {
+    $.get('/tweets').then(tweets => {
+      console.log('tweets: ', tweets);
+      renderTweets(tweets);
+    });
+  };
+
+  loadTweets();
   
-  renderTweets(data);
   // event listener
   $('.new-tweet--form').submit(function(e) {
     e.preventDefault();
     const query = $(this).serialize();
-    console.log(query);
     $.post('/tweets', query)
-      // .then( tweet => {
-      // renderTweets(tweet);
-    // });
+      .then(() => loadTweets());
   })
 });
