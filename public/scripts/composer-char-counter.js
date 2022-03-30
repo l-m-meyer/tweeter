@@ -6,9 +6,9 @@ $(document).ready(function() {
     const inputCounter = $(this).next().children()[1];
     $(inputCounter).text(remainder);
     if (remainder < 0) {
-      $(inputCounter).css('color', 'red')
+      $(inputCounter).css('color', 'red');
     } else {
-      $(inputCounter).css('color', 'black')
+      $(inputCounter).css('color', 'black');
     }
   });
 });

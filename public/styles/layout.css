@@ -34,7 +34,62 @@ main {
   height: 400px;
 
 }
-main section h4 {
+main section.new-tweet h4 {
   padding-bottom: 10px;
   border-bottom: 3px solid black;
+}
+.tweet-container {
+  margin: 2em 0;
+}
+.tweet {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  
+  border: 3px solid black;
+}
+.tweet header {
+  width: 95%;
+  padding: .5em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.tweet header div {
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+}
+.tweet header div i {
+  margin: 0;
+}
+.tweet header h4 {
+  margin: 0;
+}
+.username {
+  margin-left: .5em;
+}
+.userHandle {
+  color: #C9CBDF;
+}
+.tweet p {
+  width: 95%;
+  padding: .75em;
+  margin: 0;
+  border-bottom: 3px solid black;
+}
+.tweet footer {
+  width: 95%;
+  margin: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-size: .65em;
+  padding: 0 1em;
+}
+.tweet footer div {
+  width: 75px;
+  display: flex;
+  justify-content: space-between;
+  color: #48569D;
 }
