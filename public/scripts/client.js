@@ -43,11 +43,11 @@ const renderTweets = (tweets) => {
 // takes in a tweet object and returns a tweet <article>
 const createTweetElement = (data) => {
           
-  let defaultAvatar = $(`<i class="fa-solid fa-user-astronaut"></i>`)
-  // validate if avatar image exists
-  defaultAvatar = data.user.avatars 
-    ? data.user.avatars
-    : defaultAvatar;
+  // let defaultAvatar = $(`<i class="fa-solid fa-user-astronaut"></i>`)
+  // // validate if avatar image exists
+  // defaultAvatar = data.user.avatars 
+  //   ? data.user.avatars
+  //   : defaultAvatar;
     
   tweetHTML = `
   <article class="tweet">
