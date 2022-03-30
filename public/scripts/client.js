@@ -55,7 +55,11 @@ $(() => {
   $('.new-tweet--form').submit(function(e) {
     e.preventDefault();
     const query = $(this).serialize();
-    $.post('/tweets', query)
-      .then(() => loadTweets());
+    if (!$('#tweet-text').val().length) alert('Your tweet is empty!');
+    if ($('#tweet-text').val().length > 140) alert('Shorten your tweet!');
+    else { 
+      $.post('/tweets', query)
+        .then(() => loadTweets());
+    }
   })
 });
