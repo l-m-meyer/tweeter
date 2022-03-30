@@ -46,7 +46,7 @@ main section.new-tweet h4 {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  
+  margin: 10px;
   border: 3px solid black;
 }
 .tweet:hover {
@@ -62,10 +62,12 @@ main section.new-tweet h4 {
 .tweet header div {
   width: 110px;
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
 }
-.tweet header div i {
+.tweet header div img {
   margin: 0;
+  width: 40px;
+  height: 40px;
 }
 .tweet header h4 {
   margin: 0;
