@@ -29,7 +29,7 @@ const createTweetElement = (data) => {
     </header>
     <p>${data.content.text}</p>
     <footer>
-      <output class="footer--date">${data.created_at} days ago</output>
+      <output class="footer--date">${timeago.format(data.created_at)}</output>
       <div class="footer--icons">
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
