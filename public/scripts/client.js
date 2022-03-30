@@ -4,6 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// use to empty tweets
+// $('.tweet-container').empty();
+
 const data = [
   {
     "user": {
@@ -30,26 +33,16 @@ const data = [
 ];
 
 const renderTweets = (tweets) => {
-  //loops through tweets
-  //calls createTweetElement for each tweet
   //takes return value and appends it to the tweets container
-
-
+  for (let tweet of tweets) {
+    $('.tweet-container').prepend(createTweetElement(tweet));
+  }
 };
-
-// use to empty tweets
-// $('.tweet-container').empty();
 
 // takes in a tweet object and returns a tweet <article>
 const createTweetElement = (data) => {
-          
-  // let defaultAvatar = $(`<i class="fa-solid fa-user-astronaut"></i>`)
-  // // validate if avatar image exists
-  // defaultAvatar = data.user.avatars 
-  //   ? data.user.avatars
-  //   : defaultAvatar;
     
-  tweetHTML = `
+  let $tweet = $(`
   <article class="tweet">
     <header class="name-avatar">
       <div>
@@ -67,25 +60,26 @@ const createTweetElement = (data) => {
         <i class="fa-solid fa-heart"></i>
       </div>
     </footer>
-  </article>`;
-    
-  $('.tweet-container').prepend(tweetHTML);
+  </article>`);
+
+  return $tweet;  
 };
       
 
-renderTweets(data);
-      
+
 
 $(() => {
-  createTweetElement(data[1]);
+  
+  renderTweets(data);
   // event listener
   $('.new-tweet--form').on('submit', (e) => {
     e.preventDefault();
-    $.get('/tweets', data).then( user => {
-      for (let info of user) {
-        createTweetElement(info);
-        console.log('tweets:', createTweetElement(info));
-      }
-    })
+    console.log('abc');
+    // $.get('/tweets', data).then( user => {
+    //   for (let info of user) {
+    //     createTweetElement(info);
+    //     console.log('tweets:', createTweetElement(info));
+    //   }
+    // })
   })
 });
