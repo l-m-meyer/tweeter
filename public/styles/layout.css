@@ -10,9 +10,9 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
+/***********************
+ * Global layout stuff *
+ **********************/
 
 body {
   color: #545149;
@@ -26,25 +26,25 @@ body {
   align-items: center;
 }
 
-/*
- * Main
- */
+/********
+ * Main *
+ *******/
 .container {
   width: 90vw;
   height: 400px;
 }
 
-/*
- * Tweet Container
- */
+/*******************
+ * Tweet Container *
+ ******************/
 .tweet-container {
   margin: 2em 0;
   height: 100vh;
 }
 
-/*
- * Individual Tweets
- */
+/*********************
+ * Individual Tweets *
+ ********************/
 .tweet {
   display: flex;
   flex-flow: column nowrap;
@@ -115,4 +115,40 @@ body {
   border: 3px solid red;
   text-align: center;
   color: red;
+}
+
+/*****************
+ * Media Queries *
+ ****************/ 
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+  #navbar {
+    background-color: #4056A1 !important;
+    background-image: none !important;
+  }
+  .navbar__button {
+    background-color: inherit !important;
+    background-image: none !important;
+  }
+  .container {
+    margin: 1.5em;
+    width: 60vw !important;
+  }
+  #tweet-text {
+    width: 100% !important;
+  }
+  #header {
+    width: 40vw !important;
+    margin: 5em;
+    margin-top: 200px !important;
+    
+  }
+  .header__name h2 {
+    margin: 0;
+  }
 }

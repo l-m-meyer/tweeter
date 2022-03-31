@@ -17,6 +17,7 @@
 }
 .new-tweet--form label {
   font-weight: 600;
+  margin-top: 2em;
 }
 .new-tweet--form > div {
   display: flex;
@@ -32,4 +33,5 @@
 }
 .new-tweet__button:hover {
   cursor: pointer;
+  box-shadow: 5px 6px 0px 0px #121214;
 }
