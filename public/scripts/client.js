@@ -11,7 +11,7 @@ const escape = function(str) {
   return div.innerHTML;
 };
 
-//appends tweet to the tweets container
+//prepends tweet to the tweets container
 const renderTweets = (tweets) => {
   for (let tweet of tweets) {
     $('.tweet-container').prepend(createTweetElement(tweet));

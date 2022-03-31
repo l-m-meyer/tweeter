@@ -10,20 +10,20 @@ html {
   box-sizing: inherit;
 }
 
-/***********************
- * Global layout stuff *
- **********************/
+/*****************
+ * Global layout *
+ ****************/
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
-
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 /********
@@ -128,24 +128,24 @@ body {
     justify-content: space-around;
   }
   #navbar {
-    background-color: #4056A1 !important;
-    background-image: none !important;
+    background-color: #4056A1;
+    background-image: none;
   }
   .navbar__button {
-    background-color: inherit !important;
-    background-image: none !important;
+    background-color: inherit;
+    background-image: none;
   }
   .container {
     margin: 1.5em;
-    width: 60vw !important;
+    width: 60vw;
   }
   #tweet-text {
-    width: 100% !important;
+    width: 100%;
   }
   #header {
-    width: 40vw !important;
+    width: 40vw;
     margin: 5em;
-    margin-top: 200px !important;
+    margin-top: 200px;
     
   }
   .header__name h2 {

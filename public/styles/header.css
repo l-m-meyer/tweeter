@@ -1,15 +1,13 @@
 #header {
   height: 400px;
-  width: 100vw;
+  width: 100%;
   margin-top: 120px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  
   background-color: #D79923;
   background-image: url("../images/background-texture.png");
-
 }
 
 .header__name {
