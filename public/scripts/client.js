@@ -58,10 +58,12 @@ $(() => {
   $('.new-tweet--form').submit(function(e) {
     e.preventDefault();
     const query = $(this).serialize();
-
-    if (!$('#tweet-text').val().length) alert('Your tweet is empty!');
-    if ($('#tweet-text').val().length > 140) alert('Shorten your tweet!');
-    else { 
+    $('#tweet-text').on('input', () => $('#error').slideUp('slow'));
+    if (!$('#tweet-text').val().length){ 
+      $('#error').html('⛔ Tweet too short! ⛔').slideDown('slow');
+    } if ($('#tweet-text').val().length > 140) {
+      $('#error').html('⛔ Tweet too long! Keep it under 140! ⛔').slideDown('slow');
+    } else { 
       $.post('/tweets', query).then(() => {
         $('.tweet-container').empty();
         loadTweets();

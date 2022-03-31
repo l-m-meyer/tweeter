@@ -101,3 +101,11 @@ main section.new-tweet h4 {
 .tweet footer div i:hover {
   color: #C7A455;
 }
+#error {
+  display: none;
+  width: 100%;
+  padding: .5em;
+  border: 3px solid red;
+  text-align: center;
+  color: red;
+}
