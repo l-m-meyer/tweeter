@@ -5,7 +5,7 @@
  */
 
 // prevents cross-site scripting
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -41,7 +41,7 @@ const createTweetElement = (data) => {
     </footer>
   </article>`);
 
-  return $tweet;  
+  return $tweet;
 };
 
 $(() => {
@@ -60,11 +60,11 @@ $(() => {
     const query = $(this).serialize();
     $('#tweet-text').on('input', () => $('#error').slideUp('slow'));
     
-    if (!$('#tweet-text').val().length){ 
+    if (!$('#tweet-text').val().length) {
       $('#error').html('⛔ Tweet too short! ⛔').slideDown('slow');
     } if ($('#tweet-text').val().length > 140) {
       $('#error').html('⛔ Tweet too long! Keep it under 140! ⛔').slideDown('slow');
-    } else { 
+    } else {
       $.post('/tweets', query).then(() => {
         $('.tweet-container').empty();
         loadTweets();
@@ -72,5 +72,5 @@ $(() => {
         $('.counter').html('140');
       });
     }
-  })
+  });
 });
