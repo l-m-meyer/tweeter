@@ -1,12 +1,10 @@
-nav {
+#navbar {
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* z-index: 1; check if this is the CSS rule that causes nav to be displayed in front of header */
   
   height: 120px;
   width: 100vw;
@@ -14,18 +12,21 @@ nav {
   color: #FFFFFF;
   padding: 0 1.5em;
 }
-nav > span {
+.navbar__logo {
   font-family: Bungee, cursive, sans-serif;
 }
-nav > div {
+.navbar__button {
   display: flex;
   flex-flow: column nowrap;
   align-content: center;
-
+  
+  border-style: none;
+  background-color: #4056A1;
 }
-nav > div > p, i {
+.navbar__button p, i {
   margin: 0 auto;
+  color: #FFFFFF;
 }
-nav > div > i {
+.navbar__button i {
   color: red;
 }

@@ -1,4 +1,4 @@
-body > header {
+#header {
   height: 400px;
   width: 100vw;
   margin-top: 120px;
@@ -12,10 +12,10 @@ body > header {
 
 }
 
-header div h2 {
+.header__name {
   color: #FFFFFF;
   margin: 0;
 }
-header div h2 span {
+.header__name span {
   font-weight: 300;
 }

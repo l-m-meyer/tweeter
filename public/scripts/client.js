@@ -18,22 +18,22 @@ const renderTweets = (tweets) => {
   }
 };
 
-// takes in a tweet object and returns a tweet <article>
+// generates HTML for new tweet to be rendered
 const createTweetElement = (data) => {
     
   let $tweet = $(`
   <article class="tweet">
-    <header class="name-avatar">
+    <header class="tweet__header">
       <div>
         <img src="${data.user.avatars}"></img>
-        <h4 class="username">${data.user.name}</h4>
+        <h4 class="tweet--name">${data.user.name}</h4>
       </div>
-      <h4 class="userHandle">${data.user.handle}</h4>
+      <h4 class="tweet--handle">${data.user.handle}</h4>
     </header>
-    <p>${escape(data.content.text)}</p>
-    <footer>
+    <p class="tweet--content">${escape(data.content.text)}</p>
+    <footer class="tweet__footer">
       <output class="footer--date">${timeago.format(data.created_at)}</output>
-      <div class="footer--icons">
+      <div class="footer__icons">
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
         <i class="fa-solid fa-heart"></i>
@@ -59,6 +59,7 @@ $(() => {
     e.preventDefault();
     const query = $(this).serialize();
     $('#tweet-text').on('input', () => $('#error').slideUp('slow'));
+    
     if (!$('#tweet-text').val().length){ 
       $('#error').html('⛔ Tweet too short! ⛔').slideDown('slow');
     } if ($('#tweet-text').val().length > 140) {
@@ -67,7 +68,8 @@ $(() => {
       $.post('/tweets', query).then(() => {
         $('.tweet-container').empty();
         loadTweets();
-        $('.new-tweet--form').trigger("reset");
+        $('.new-tweet--form').trigger('reset');
+        $('.counter').html('140');
       });
     }
   })

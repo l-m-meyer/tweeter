@@ -3,6 +3,9 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -23,37 +26,41 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./scripts/composer-char-counter.js"></script>
     
     <!-- Library timeago.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script src="./scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
-    <nav class="wrapper">
-      <span>tweeter</span>
-      <div class="wrapper">
+    <!-- NAV START -->
+    <nav id="navbar">
+      <span class="navbar__logo">tweeter</span>
+      <button class="navbar__button">
         <p><strong>Write</strong> a new tweet</p>
         <i class="fa-solid fa-angles-down"></i>
-      </div>
+      </button>
     </nav>
+    <!-- NAV END -->
 
-    <header class="wrapper">
-      <div class="avatar">
+    <!-- HEADER START -->
+    <header id="header">
+      <div class="header__avatar">
         <img src="/images/profile-hex.png" alt="white hexagonal shape containing user avatar">
       </div>
       <br>
-      <div class="username">
+      <div class="header__name">
         <h2>Lisa <span>Meyer</span></h2>
       </div>
     </header>
+    <!-- HEADER END -->
 
-    <!-- Page-specific (main) content here -->
+    <!-- MAIN START -->
     <main class="container">
+      <!-- COMPOSE NEW TWEET START -->
       <section class="new-tweet">
         <p id="error"></p>
         <h2>Compose Tweet</h2>
@@ -66,7 +73,11 @@
           </div>
         </form>
       </section>
+      <!-- COMPOSE NEW TWEET END -->
+      
+      <!-- POSTED TWEETS -->
       <section class="tweet-container"></section>
     </main>
+    <!-- MAIN END -->
   </body>
 </html>

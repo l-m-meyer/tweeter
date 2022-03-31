@@ -29,15 +29,11 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-main {
+.container {
   width: 90vw;
   height: 400px;
+}
 
-}
-main section.new-tweet h4 {
-  padding-bottom: 10px;
-  border-bottom: 3px solid black;
-}
 .tweet-container {
   margin: 2em 0;
   height: 100vh;
@@ -52,38 +48,38 @@ main section.new-tweet h4 {
 .tweet:hover {
   box-shadow: 5px 6px 0px 0px #C9CBDF;
 }
-.tweet header {
+.tweet__header {
   width: 95%;
   padding: .5em;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-.tweet header div {
+.tweet__header div {
   display: flex;
   gap: 10px;
 }
-.tweet header div img {
+.tweet__header div img {
   margin: 0;
   width: 40px;
   height: 40px;
 }
-.tweet header h4 {
+.tweet__header h4 {
   margin: 0;
 }
-.username {
+.tweet--name {
   margin-left: .5em;
 }
-.userHandle {
+.tweet--handle {
   color: #C9CBDF;
 }
-.tweet p {
+.tweet--content {
   width: 95%;
   padding: .75em;
   margin: 0;
   border-bottom: 3px solid black;
 }
-.tweet footer {
+.tweet__footer {
   width: 95%;
   margin: 10px;
   display: flex;
@@ -92,13 +88,16 @@ main section.new-tweet h4 {
   font-size: .65em;
   padding: 0 1em;
 }
-.tweet footer div {
+.footer__icons {
   width: 75px;
   display: flex;
   justify-content: space-between;
-  color: #48569D;
 }
-.tweet footer div i:hover {
+.footer__icons i {
+  color: #48569D;
+
+}
+.footer__icons i:hover {
   color: #C7A455;
 }
 #error {
