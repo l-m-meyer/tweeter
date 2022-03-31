@@ -1,4 +1,4 @@
-form {
+.new-tweet--form {
   display: flex;
   flex-flow: column nowrap;
 }
@@ -15,10 +15,10 @@ form {
   border-bottom: 3px solid black;
   font-weight: 300;
 }
-form > label {
+.new-tweet--form label {
   font-weight: 600;
 }
-form > div {
+.new-tweet--form > div {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -26,7 +26,10 @@ form > div {
 
   font-family: Bungee, cursive, sans-serif;
 }
-form > div > button {
+.new-tweet__button {
   background-color: #4056A1;
   color: #FFFFFF;
+}
+.new-tweet__button:hover {
+  cursor: pointer;
 }

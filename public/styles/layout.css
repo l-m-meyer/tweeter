@@ -27,17 +27,24 @@ body {
 }
 
 /*
- * Additional CSS can be defined below or in other CSS files, as per instructions
+ * Main
  */
 .container {
   width: 90vw;
   height: 400px;
 }
 
+/*
+ * Tweet Container
+ */
 .tweet-container {
   margin: 2em 0;
   height: 100vh;
 }
+
+/*
+ * Individual Tweets
+ */
 .tweet {
   display: flex;
   flex-flow: column nowrap;
@@ -99,6 +106,7 @@ body {
 }
 .footer__icons i:hover {
   color: #C7A455;
+  cursor: pointer;
 }
 #error {
   display: none;
