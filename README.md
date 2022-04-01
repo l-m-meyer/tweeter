@@ -1,18 +1,65 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, responsive, single-page Twitter clone built with [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), [jQuery](https://jquery.com/), and [AJAX](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX).
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+## Purpose
+**_BEWARE:_ This app was created for learning purposes. It is _not_ intended for use in production-grade software.**
 
-## Getting Started
+This project was created and published by me as part of my learnings at Lighthouse Labs. Please note that the backend files related to this project were provided by Lighthouse Labs.
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+## Tweeter in Action
+_Tweeter is a fully responsive web app and looks beautiful on both desktops and mobile devices!_
+!['Screenshot of full-sized Tweeter page'](./docs/fullpage-ss.png)
+!['Screenshot of mobile Tweeter page'](./docs/mobile-ss.png)
 
-## Dependencies
+_The People love Tweeter!_
+!['Screenshot of posted tweet'](./docs/tweet-ss.png)
+!['Screenshot of drafting new tweet'](./docs/new-tweet-ss.png)
 
-- Express
-- Node 5.10.x or above
+## Using Tweeter
+
+### Setup
+To set up Tweeter, ensure that you have Node.js installed then execute the following.
+
+```
+git clone git@github.com:l-m-meyer/tweeter.git
+cd tweeter
+npm install
+```
+
+## Development
+
+### Directory Structure
+```
+./                      Main project directory
+./public                Frontend documents
+        /images
+        /scripts
+        /styles
+        /vendor
+./server                Backend documents
+        /data-files
+        /lib
+        /routes
+./docs                  Photos of Tweeter      
+```
+
+### Dependencies
+
+* [express](https://www.npmjs.com/package/express)
+* [body-parser](https://www.npmjs.com/package/body-parser)
+* chance
+* [md5](https://www.npmjs.com/package/md5)
+
+### Development Dependencies
+The following NPM packages are used:
+* [nodemon](https://www.npmjs.com/package/nodemon)
+
+### Run
+It is preferred to use nodemon to automatically restart the server when files change while working on Tweeter.
+
+Use this command:
+```
+npm run local
+```
+Then go to <http://localhost:8080/> in your browser.
