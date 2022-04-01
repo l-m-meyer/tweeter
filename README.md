@@ -65,6 +65,6 @@ npm run local
 Then go to <http://localhost:8080/> in your browser.
 
 ## Stretch Goals
-[ ] Allow for users to use `Enter` key to submit new tweets.
-[ ] Produce an error message for tweets that only consist of whitespace.
-[ ] Implement LHL stretch features.
+* [ ] Allow for users to use `Enter` key to submit new tweets.
+* [ ] Produce an error message for tweets that only consist of whitespace.
+* [ ] Implement LHL stretch features.
