@@ -11,8 +11,8 @@
   resize: none;
   outline: none;
   
-  background-color: #f4f1ec;
-  border-bottom: 3px solid black;
+  background-color: var(--ghostwhite);
+  border-bottom: 3px solid var(--darkred);
   font-weight: 300;
 }
 .new-tweet--form label {
@@ -27,10 +27,13 @@
   font-family: Bungee, cursive, sans-serif;
 }
 .new-tweet__button {
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: var(--lightblue);
+  color: var(--ghostwhite);
+  border: 0px solid transparent;
 }
 .new-tweet__button:hover {
   cursor: pointer;
-  box-shadow: 5px 6px 0px 0px #121214;
+  box-shadow: 5px 6px 0px 0px var(--darkred);
+  border: 1px solid var(--ghostwhite);
+  margin: -1px;
 }

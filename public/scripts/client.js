@@ -57,12 +57,15 @@ $(() => {
   // event listener
   $('.new-tweet--form').submit(function(e) {
     e.preventDefault();
+    const tweet = $('#tweet-text');
     const query = $(this).serialize();
-    $('#tweet-text').on('input', () => $('#error').slideUp('slow'));
+    tweet.on('input', () => $('#error').slideUp('slow'));
     
-    if (!$('#tweet-text').val().length) {
+    if (!tweet.val().trim().length) {
+      $('#error').html('⛔ Nothing to say? ⛔').slideDown('slow');
+    } else if (!tweet.val().length) {
       $('#error').html('⛔ Tweet too short! ⛔').slideDown('slow');
-    } if ($('#tweet-text').val().length > 140) {
+    } else if (tweet.val().length > 140) {
       $('#error').html('⛔ Tweet too long! Keep it under 140! ⛔').slideDown('slow');
     } else {
       $.post('/tweets', query).then(() => {

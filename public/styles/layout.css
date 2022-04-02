@@ -1,3 +1,11 @@
+:root {
+  --lightblue: #9AADBF;
+  --tan: #D3B99F;
+  --red: #C17767;
+  --darkred: #210203;
+  --ghostwhite: #f4f1ec;
+}
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -15,8 +23,8 @@ html {
  ****************/
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: var(--darkred);
+  background-color: var(--ghostwhite);
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
@@ -50,13 +58,13 @@ body {
   flex-flow: column nowrap;
   align-items: center;
   margin: 10px;
-  border: 3px solid black;
+  border: 3px solid var(--darkred);
 }
 .tweet:hover {
-  box-shadow: 5px 6px 0px 0px #C9CBDF;
+  box-shadow: 5px 6px 0px 0px var(--lightblue);
 }
 .tweet__header {
-  width: 95%;
+  width: 100%;
   padding: .5em;
   display: flex;
   flex-flow: row nowrap;
@@ -78,16 +86,16 @@ body {
   margin-left: .5em;
 }
 .tweet--handle {
-  color: #C9CBDF;
+  color: var(--lightblue);
 }
 .tweet--content {
-  width: 95%;
+  width: 97%;
   padding: .75em;
   margin: 0;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid var(--darkred);
 }
 .tweet__footer {
-  width: 95%;
+  width: 100%;
   margin: 10px;
   display: flex;
   flex-flow: row nowrap;
@@ -101,20 +109,23 @@ body {
   justify-content: space-between;
 }
 .footer__icons i {
-  color: #48569D;
+  color: var(--darkred);
 
 }
 .footer__icons i:hover {
-  color: #C7A455;
+  color: var(--tan);
   cursor: pointer;
+}
+.footer__icons i:active {
+  color: var(--red);
 }
 #error {
   display: none;
   width: 100%;
   padding: .5em;
-  border: 3px solid red;
+  border: 3px solid var(--darkred);
   text-align: center;
-  color: red;
+  color: var(--darkred);
 }
 
 /*****************
@@ -127,14 +138,6 @@ body {
     flex-flow: row nowrap;
     justify-content: space-around;
   }
-  #navbar {
-    background-color: #4056A1;
-    background-image: none;
-  }
-  .navbar__button {
-    background-color: inherit;
-    background-image: none;
-  }
   .container {
     margin: 1.5em;
     width: 60vw;
@@ -146,7 +149,7 @@ body {
     width: 40vw;
     margin: 5em;
     margin-top: 200px;
-    
+    box-shadow: 5px 6px 0px 0px var(--lightblue);
   }
   .header__name h2 {
     margin: 0;

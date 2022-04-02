@@ -6,12 +6,12 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: #D79923;
+  background-color: var(--darkred);
   background-image: url("../images/background-texture.png");
 }
 
 .header__name {
-  color: #FFFFFF;
+  color: var(--ghostwhite);
   margin: 0;
 }
 .header__name span {

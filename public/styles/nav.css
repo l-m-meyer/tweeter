@@ -7,9 +7,9 @@
   align-items: center;
   height: 120px;
   width: 100vw;
-  background-color: #D79923;
+  background-color: var(--darkred);
   background-image: url("../images/background-texture.png");
-  color: #FFFFFF;
+  color: var(--ghostwhite);
   padding: 0 1.5em;
 }
 .navbar__logo {
@@ -25,8 +25,8 @@
 }
 .navbar__button p, i {
   margin: 0 auto;
-  color: #FFFFFF;
+  color: var(--ghostwhite);
 }
-.navbar__button i {
-  color: red;
+.fa-angles-down {
+  color: var(--lightblue);
 }
