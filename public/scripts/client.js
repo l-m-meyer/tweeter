@@ -17,6 +17,7 @@
   
   //prepends tweet to the tweets container
   const renderTweets = (tweets) => {
+
     for (let tweet of tweets) {
       $('.tweet-container').prepend(createTweetElement(tweet));
     }
@@ -51,7 +52,6 @@
   // displays tweets from database to tweets container
   const loadTweets = () => {
     $.get('/tweets').then(tweets => {
-      console.log('tweets: ', tweets);
       renderTweets(tweets);
     });
   };

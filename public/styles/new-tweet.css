@@ -1,6 +1,7 @@
 .new-tweet--form {
   display: flex;
   flex-flow: column nowrap;
+  margin-top: 20px;
 }
 #tweet-text {
   width: 90vw;
