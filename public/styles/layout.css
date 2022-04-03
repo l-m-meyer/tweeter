@@ -127,6 +127,9 @@ body {
   text-align: center;
   color: var(--darkred);
 }
+.hidden {
+  display: none;
+}
 
 /*****************
  * Media Queries *
